@@ -5,5 +5,13 @@
 		"explanation": "An infrastructure binder blueprint for the simplest AWS VPC (Virtual Private Cloud)"
 	},
 	"bindings": [
+		{
+			"target": {
+				"repository": "https://github.com/EnginesAWS/vpc"
+			},
+			"configuration": {
+				"cidr_block": "10.111.0.0/16",
+			}
+		}
 	]
 }
