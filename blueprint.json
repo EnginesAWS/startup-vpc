@@ -1,0 +1,9 @@
+{
+	"identifier": "startup-vpc",
+	"about": {
+		"title": "Startup Virtual Private Cloud",
+		"explanation": "An infrastructure binder blueprint for the simplest AWS VPC (Virtual Private Cloud)"
+	},
+	"bindings": [
+	]
+}
