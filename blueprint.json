@@ -10,7 +10,7 @@
 				"repository": "https://github.com/EnginesAWS/vpc"
 			},
 			"configuration": {
-				"cidr_block": "10.111.0.0/16",
+				"cidr_block": "10.111.0.0/16"
 			}
 		},
 		{
