@@ -6,6 +6,7 @@
 	},
 	"bindings": [
 		{
+			"type": "configure",
 			"target": {
 				"repository": "https://github.com/EnginesAWS/vpc"
 			},
@@ -14,42 +15,46 @@
 			}
 		},
 		{
+			"type": "configure",
 			"identifier": "subnet_a",
 			"target": {
 				"repository": "https://github.com/EnginesAWS/subnet"
 			},
 			"configuration": {
-				"vpc_id" : "aws_vpc.^^vpc.identifier^^.id",
+				"vpc_id" : "aws_vpc.vpc.id",
 				"cidr_block": "10.111.111.0/24",
 				"availability_zone": "^^availability_zone^^"
 			}
 		},
 		{
+			"type": "configure",
 			"identifier": "subnet_b",
 			"target": {
 				"repository": "https://github.com/EnginesAWS/subnet"
 			},
 			"configuration": {
-				"vpc_id" : "aws_vpc.^^vpc.identifier^^.id",
+				"vpc_id" : "aws_vpc.vpc.id",
 				"cidr_block": "10.111.222.0/24",
 				"availability_zone": "^^availability_zone^^"
 			}
 		},
 		{
+			"type": "configure",
 			"target": {
 				"repository": "https://github.com/EnginesAWS/internet-gateway"
 			},
 			"configuration": {
-				"vpc_id" : "aws_vpc.^^vpc.identifier^^.id"
+				"vpc_id" : "aws_vpc.vpc.id"
 			}
 		},
 		{
+			"type": "configure",
 			"target": {
 				"repository": "https://github.com/EnginesAWS/startup-route-table"
 			},
 			"configuration": {
-				"vpc_id" : "aws_vpc.^^vpc.identifier^^.id",
-				"gateway_id" : "aws_internet_gateway.^^internet-gateway.identifier^^.id"
+				"vpc_id" : "aws_vpc.vpc.id",
+				"gateway_id" : "aws_internet_gateway.internet-gateway.id"
 			}
 		}
 	]
