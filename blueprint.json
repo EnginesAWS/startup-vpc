@@ -26,6 +26,18 @@
 			}
 			},
 			{
+			"type": "load_balencer",
+			 "identifier": "external-lb",
+			 "subnets": ["subnet_a","subnet_b"],
+			 "security_groups": ["sg-main"]
+			},
+			{
+			"type": "load_balencer_listener",
+			 "port": "443",
+			 "protocol": "HTTPS",
+			 "certificate_arn": "certificate_arn"
+			},
+			{
 			"type": "security_group",
 			"identifier": "sg-main",
 			"configuration": {
