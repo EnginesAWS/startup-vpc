@@ -24,27 +24,42 @@
 			"configuration": {
 				"cidr_block": "10.111.222.0/24"
 			}
-			},
-			{
+		},
+		{
 			"type": "load_balencer",
-			 "identifier": "external-lb",
-			 "subnets": ["subnet_a","subnet_b"],
-			 "security_groups": ["sg-main"],
-			 "port": "443",
-			 "protocol": "HTTPS",
-			 "certificate_arn": "certificate_arn"
-			},
-			{
-			"type": "security_group",
-			"identifier": "sg-main",
 			"configuration": {
-			  "in_from_port" : 0,
-              "in_to_port"  : 443,
-              "in_protocol" : "tcp",
-              "in_cidr_blocks"  :["0.0.0.0/0"]
+				"identifier": "external-lb",
+				"subnets": [
+					"subnet_a",
+					"subnet_b"
+				],
+				"security_groups": [
+					"sg-main"
+				],
+				"port": "443",
+				"protocol": "HTTPS",
+				"certificate_arn": "certificate_arn"
 			}
 		},
-		{"type": "internet_gateway"},
-		{"type": "route_table"}
+		{
+			"type": "security_group",
+			"configuration": {
+				"identifier": "sg-main",
+				"configuration": {
+					"in_from_port": 0,
+					"in_to_port": 443,
+					"in_protocol": "tcp",
+					"in_cidr_blocks": [
+						"0.0.0.0/0"
+					]
+				}
+			}
+		},
+		{
+			"type": "internet_gateway"
+		},
+		{
+			"type": "route_table"
+		}
 	]
 }
