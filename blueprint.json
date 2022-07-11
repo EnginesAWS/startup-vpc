@@ -26,7 +26,7 @@
 			}
 		},
 		{
-			"type": "load_balencer",
+			"type": "load_balancer",
 			"configuration": {
 				"identifier": "external-lb",
 				"subnets": [
