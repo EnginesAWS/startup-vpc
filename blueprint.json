@@ -43,7 +43,6 @@
 		},
 		{
 			"type": "security_group",
-			"configuration": {
 				"identifier": "sg-main",
 				"configuration": {
 					"in_from_port": 0,
@@ -51,9 +50,8 @@
 					"in_protocol": "tcp",
 					"in_cidr_blocks": [
 						"0.0.0.0/0"
-					]
-				}
-			}
+					]				
+			    }
 		},
 		{
 			"type": "internet_gateway"
