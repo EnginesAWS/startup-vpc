@@ -15,14 +15,16 @@
 			"type": "subnet",
 			"identifier": "subnet_a",
 			"configuration": {
-				"cidr_block": "10.111.111.0/24"
+				"cidr_block": "10.111.111.0/24",
+				"availability_zone": "ap-southeast-2a"
 			}
 		},
 		{
 			"type": "subnet",
 			"identifier": "subnet_b",
 			"configuration": {
-				"cidr_block": "10.111.222.0/24"
+				"cidr_block": "10.111.222.0/24",
+				"availability_zone": "ap-southeast-2b"
 			}
 		},
 		{
