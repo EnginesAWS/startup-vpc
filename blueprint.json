@@ -44,6 +44,9 @@
 			}
 		},
 		{
+			"type": "load_balancer_target_group"
+		},
+		{
 			"type": "security_group",
 				"identifier": "sg-main",
 				"configuration": {
