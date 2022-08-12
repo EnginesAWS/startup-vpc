@@ -30,13 +30,13 @@
 		{
 			"type": "load_balancer",
 			"configuration": {
-				"identifier": "external-lb",
+				"identifier": "external",
 				"subnets": [
 					"subnet_a",
 					"subnet_b"
 				],
 				"security_groups": [
-					"sg-main"
+					"security_group"
 				],
 				"port": "443",
 				"protocol": "HTTPS",
@@ -48,7 +48,6 @@
 		},
 		{
 			"type": "security_group",
-				"identifier": "sg-main",
 				"configuration": {
 					"in_from_port": 0,
 					"in_to_port": 443,
