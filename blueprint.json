@@ -45,6 +45,9 @@
 		},
 		{
 			"type": "load_balancer_target_group"
+			"configuration": {
+				"port": "443"
+			}
 		},
 		{
 			"type": "security_group",
