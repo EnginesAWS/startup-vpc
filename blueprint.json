@@ -30,17 +30,13 @@
 		{
 			"type": "load_balancer",
 			"configuration": {
-				"identifier": "external",
 				"subnets": [
 					"subnet_a",
 					"subnet_b"
 				],
 				"security_groups": [
 					"security_group"
-				],
-				"port": "443",
-				"protocol": "HTTPS",
-				"certificate_arn": "certificate_arn"
+				]
 			}
 		},
 		{
