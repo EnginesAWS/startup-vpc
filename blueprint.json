@@ -29,18 +29,7 @@
 				"availability_zone": "ap-southeast-2b"
 			}
 		},
-		{
-			"type": "load_balancer",
-			"configuration": {
-				"subnets": [
-					"public_a",
-					"public_b"
-				],
-				"security_groups": [
-					"security_group"
-				]
-			}
-		},
+		{"type": "load_balancer"},
 		{
 			"type": "load_balancer_target_group",
 			"configuration": {
