@@ -42,16 +42,18 @@
 					"in_from_port": 0,
 					"in_to_port": 443,
 					"in_protocol": "tcp",
-					"in_cidr_blocks": [
-						"0.0.0.0/0"
-					]				
-			    }
+					"in_cidr_blocks": ["0.0.0.0/0"]
+				}
+		},
+		{"type": "internet_gateway"},
+		{
+			"type": "nat_gateway",
+			"identifier": "public_a"
 		},
 		{
-			"type": "internet_gateway"
+			"type": "nat_gateway",
+			"identifier": "public_b"
 		},
-		{
-			"type": "route_table"
-		}
+		{"type": "route_table"}
 	]
 }
