@@ -24,12 +24,22 @@
 			"type": "subnet",
 			"identifier": "public_b",
 			"configuration": {
-				"public": true,
 				"cidr_block": "10.111.222.0/24",
 				"availability_zone": "ap-southeast-2b"
 			}
 		},
-		{"type": "load_balancer"},
+		{
+			"type": "load_balancer",
+			"configuration": {
+				"subnets": [
+					"public_a",
+					"public_b"
+				],
+				"security_groups": [
+					"security_group"
+				]
+			}
+		},
 		{
 			"type": "load_balancer_target_group",
 			"configuration": {
@@ -38,12 +48,14 @@
 		},
 		{
 			"type": "security_group",
-				"configuration": {
-					"in_from_port": 0,
-					"in_to_port": 443,
-					"in_protocol": "tcp",
-					"in_cidr_blocks": ["0.0.0.0/0"]
-				}
+			"configuration": {
+				"in_from_port": 0,
+				"in_to_port": 443,
+				"in_protocol": "tcp",
+				"in_cidr_blocks": [
+					"0.0.0.0/0"
+				]
+		   }
 		},
 		{"type": "internet_gateway"},
 		{
@@ -54,6 +66,13 @@
 			"type": "nat_gateway",
 			"identifier": "public_b"
 		},
-		{"type": "route_table"}
+		{"type": "route_table"},
+		{
+			"type": "route_table",
+			"identifier": "public_a",
+			"configuration": {
+				"type": "nat"
+			}
+		}
 	]
 }
