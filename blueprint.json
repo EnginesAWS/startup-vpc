@@ -71,7 +71,7 @@
 			"type": "route_table",
 			"identifier": "public_a",
 			"configuration": {
-				"type": "nat"
+				"gateway_type": "nat"
 			}
 		}
 	]
