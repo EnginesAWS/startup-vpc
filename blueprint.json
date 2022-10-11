@@ -29,24 +29,6 @@
 			}
 		},
 		{
-			"type": "load_balancer",
-			"configuration": {
-				"subnets": [
-					"public_a",
-					"public_b"
-				],
-				"security_groups": [
-					"security_group"
-				]
-			}
-		},
-		{
-			"type": "load_balancer_target_group",
-			"configuration": {
-				"port": "443"
-			}
-		},
-		{
 			"type": "security_group",
 			"configuration": {
 				"in_from_port": 0,
