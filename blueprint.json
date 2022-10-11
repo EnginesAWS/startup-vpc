@@ -40,13 +40,6 @@
 		   }
 		},
 		{"type": "internet_gateway"},
-		{"type": "route_table"},
-		{
-			"type": "route_table",
-			"identifier": "public_a",
-			"configuration": {
-				"gateway_type": "nat"
-			}
-		}
+		{"type": "route_table"}
 	]
 }
